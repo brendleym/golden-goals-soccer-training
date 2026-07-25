@@ -1,0 +1,418 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --gold-dark: #b4851d;
+  --gold: #d8b24d;
+  --gold-light: #fbf3dc;
+  --gold-soft: #fffaf0;
+  --white: #ffffff;
+  --ink: #4f3d16;
+  --muted: #7a6942;
+  --border: rgba(180, 133, 29, 0.16);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  color: var(--ink);
+  background: #fffdf8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px clamp(22px, 6vw, 86px);
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+
+.logo-placeholder {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: #fff9ea;
+  border: 2px dashed var(--gold);
+  color: var(--gold-dark);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+}
+
+.nav nav {
+  display: flex;
+  gap: 18px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.hero {
+  min-height: 76vh;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 46px;
+  align-items: center;
+  padding: 82px clamp(22px, 6vw, 86px);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(216,178,77,0.17), transparent 25%),
+    linear-gradient(135deg, #fffdf8, #fbf4e2);
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--gold-dark);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  margin: 0;
+  max-width: 780px;
+  font-size: clamp(3rem, 6.5vw, 5.9rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  margin: 0 0 20px;
+  font-size: clamp(2.1rem, 4vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.hero-text {
+  margin: 24px 0 28px;
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 24px;
+  border-radius: 999px;
+  background: var(--gold-dark);
+  color: var(--white);
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  background: var(--gold);
+}
+
+.hero-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.hero-facts span {
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.schedule-card {
+  padding: 30px;
+  border-radius: 26px;
+  background: var(--gold-dark);
+  color: var(--white);
+  box-shadow: 0 24px 52px rgba(180,133,29,0.20);
+}
+
+.card-label {
+  margin: 0 0 12px;
+  color: #f7e7bc;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.session {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(255,255,255,0.20);
+}
+
+.session div {
+  display: grid;
+  gap: 5px;
+}
+
+.session span {
+  color: rgba(255,255,255,0.78);
+}
+
+.session.group {
+  color: #fff3cf;
+}
+
+.section {
+  padding: 82px clamp(22px, 6vw, 86px);
+}
+
+.section-heading {
+  margin-bottom: 36px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.skills article {
+  padding: 28px;
+  border-radius: 22px;
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+.skills h3 {
+  margin: 0 0 10px;
+}
+
+.skills p,
+.about-copy p,
+.location-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 54px;
+  align-items: center;
+  background: #fff9ea;
+}
+
+.photo-placeholder {
+  aspect-ratio: 4 / 5;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 8px;
+  border: 2px dashed var(--gold);
+  border-radius: 28px;
+  background: rgba(255,255,255,0.65);
+  color: var(--gold-dark);
+  text-align: center;
+}
+
+.photo-placeholder span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.photo-placeholder small {
+  color: var(--muted);
+}
+
+.about-copy {
+  display: grid;
+  gap: 18px;
+  font-size: 1.05rem;
+}
+
+.about-copy h2 {
+  margin-bottom: 0;
+}
+
+.location {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 54px;
+  align-items: start;
+}
+
+.location-copy {
+  display: grid;
+  gap: 18px;
+  font-size: 1.04rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 26px clamp(22px, 6vw, 86px);
+  background: var(--gold-dark);
+  color: var(--white);
+  font-weight: 700;
+}
+
+@media (max-width: 880px) {
+  .hero,
+  .about,
+  .location {
+    grid-template-columns: 1fr;
+  }
+
+  .trainer-photo {
+    max-width: 430px;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero {
+    padding-top: 58px;
+  }
+
+  .session,
+  footer {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+
+.site-logo {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: var(--white);
+}
+
+.essentials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  background: #fffaf0;
+}
+
+.essential-card {
+  padding: 26px;
+  border-radius: 22px;
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+.essential-card h3 {
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+
+.essential-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.essential-card a {
+  color: var(--gold-dark);
+  font-weight: 700;
+}
+
+@media (max-width: 880px) {
+  .essentials {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* White and gold refresh */
+:root {
+  --gold-dark: #b78618;
+  --gold: #d4a93a;
+  --gold-light: #fff7df;
+  --gold-soft: #fffdf6;
+  --white: #ffffff;
+  --ink: #4a3915;
+  --muted: #7a6a47;
+  --border: rgba(183, 134, 24, 0.16);
+}
+
+body {
+  background: var(--white);
+}
+
+.nav {
+  background: var(--white);
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(212,169,58,0.12), transparent 25%),
+    linear-gradient(135deg, #ffffff, #fff8e6);
+}
+
+.skills article,
+.essential-card,
+.about,
+.location,
+.info-strip > div {
+  background: var(--white);
+}
+
+.section {
+  background: var(--white);
+}
+
+.about {
+  background: #fffaf0;
+}
+
+.location {
+  background: var(--white);
+}
+
+.hero-facts span,
+.quick-facts span {
+  background: var(--white);
+}
